@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大阪长野亲子游攻略</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏯 大阪长野亲子游攻略 🌸</h1>
+            <p>带娃游日本，探索大阪与长野的亲子乐趣</p>
+        </header>
+
+        <main>
+            <!-- 行程概览 -->
+            <section class="overview-section">
+                <h2>📅 行程概览</h2>
+                <div class="itinerary-grid">
+                    <div class="itinerary-card">
+                        <h3>第1-2天：大阪</h3>
+                        <ul>
+                            <li>✨ 大阪环球影城 USJ</li>
+                            <li>🏯 大阪城公园</li>
+                            <li>🦀 道顿堀美食街</li>
+                            <li>🎡 大阪海游馆</li>
+                        </ul>
+                    </div>
+                    <div class="itinerary-card">
+                        <h3>第3-4天：长野</h3>
+                        <ul>
+                            <li>🐵 地狱谷野猿公苑（雪猴泡温泉）</li>
+                            <li>🏔️ 上高地徒步</li>
+                            <li>🏂 白马滑雪场</li>
+                            <li>🌸 善光寺参拜</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 景点推荐 -->
+            <section class="attractions-section">
+                <h2>🌟 推荐景点</h2>
+                <div id="attractionsList" class="attractions-grid">
+                    <div class="attraction-card">
+                        <h3>🎢 大阪环球影城</h3>
+                        <p><strong>适合年龄：</strong>全年龄段</p>
+                        <p><strong>亮点：</strong>哈利波特主题区、小黄人乐园、适合亲子的游乐设施</p>
+                        <p><strong>建议游玩时间：</strong>全天（建议购买快速通行证）</p>
+                    </div>
+                    <div class="attraction-card">
+                        <h3>🐵 地狱谷野猿公苑</h3>
+                        <p><strong>适合年龄：</strong>3岁以上</p>
+                        <p><strong>亮点：</strong>观赏野生日本猕猴在温泉中泡澡的独特景象</p>
+                        <p><strong>建议游玩时间：</strong>2-3小时</p>
+                    </div>
+                    <div class="attraction-card">
+                        <h3>🏔️ 上高地</h3>
+                        <p><strong>适合年龄：</strong>5岁以上</p>
+                        <p><strong>亮点：</strong>日本阿尔卑斯山美景，亲子徒步路线，自然教育</p>
+                        <p><strong>建议游玩时间：</strong>半天至一天</p>
+                    </div>
+                    <div class="attraction-card">
+                        <h3>🐋 大阪海游馆</h3>
+                        <p><strong>适合年龄：</strong>全年龄段</p>
+                        <p><strong>亮点：</strong>亚洲最大的水族馆之一，近距离接触海洋生物</p>
+                        <p><strong>建议游玩时间：</strong>3-4小时</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 实用信息 -->
+            <section class="info-section">
+                <h2>📝 实用信息</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>🚄 交通</h3>
+                        <ul>
+                            <li>大阪-长野：JR中央本线约4小时</li>
+                            <li>建议购买JR Pass可节省费用</li>
+                            <li>大阪市内：地铁一日券很划算</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>🍱 美食推荐</h3>
+                        <ul>
+                            <li>大阪烧、章鱼烧（道顿堀）</li>
+                            <li>长野荞麦面</li>
+                            <li>和牛烤肉（适合孩子）</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>🏨 住宿建议</h3>
+                        <ul>
+                            <li>大阪：难波、心斋桥附近</li>
+                            <li>长野：汤田中温泉、松本市内</li>
+                            <li>选择有儿童设施的酒店</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>⚠️ 注意事项</h3>
+                        <ul>
+                            <li>冬季长野较冷，注意保暖</li>
+                            <li>提前预订热门景点门票</li>
+                            <li>准备常用儿童药品</li>
+                            <li>了解日本文化礼仪</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 我的行程笔记 -->
+            <section class="notes-section">
+                <h2>📋 我的行程笔记</h2>
+                <div class="input-section">
+                    <form id="dataForm">
+                        <div class="form-group">
+                            <label for="messageInput">添加行程笔记或提醒：</label>
+                            <input 
+                                type="text" 
+                                id="messageInput" 
+                                placeholder="例如：记得带相机拍摄雪猴..." 
+                                required
+                            >
+                        </div>
+                        <button type="submit" class="btn btn-primary">添加笔记</button>
+                    </form>
+                </div>
+                <div class="controls">
+                    <button id="refreshBtn" class="btn btn-secondary">刷新列表</button>
+                </div>
+                <div id="dataList" class="data-list">
+                    <p class="loading">加载中...</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2024 大阪长野亲子游攻略 | 祝您旅途愉快！🎉</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
+
