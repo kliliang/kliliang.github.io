@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大阪长野亲子游攻略 - 5天4晚完整行程</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
+    <!-- 头部导航 -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-plane-departure text-3xl text-blue-600"></i>
+                    <h1 class="text-2xl font-bold text-gray-800">大阪长野亲子游攻略</h1>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#overview" class="nav-link">行程概览</a>
+                    <a href="#itinerary" class="nav-link">详细行程</a>
+                    <a href="#transport" class="nav-link">交通指南</a>
+                    <a href="#tips" class="nav-link">实用贴士</a>
+                </div>
+                <button id="menuBtn" class="md:hidden text-gray-600">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 移动端菜单 -->
+    <div id="mobileMenu" class="hidden bg-white shadow-lg md:hidden">
+        <div class="container mx-auto px-4 py-4 space-y-3">
+            <a href="#overview" class="block py-2 text-gray-700 hover:text-blue-600">行程概览</a>
+            <a href="#itinerary" class="block py-2 text-gray-700 hover:text-blue-600">详细行程</a>
+            <a href="#transport" class="block py-2 text-gray-700 hover:text-blue-600">交通指南</a>
+            <a href="#tips" class="block py-2 text-gray-700 hover:text-blue-600">实用贴士</a>
+        </div>
+    </div>
+
+    <!-- 英雄区域 -->
+    <section class="hero-section relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-600/90 to-purple-600/90"></div>
+        <div class="container mx-auto px-4 py-20 relative z-10">
+            <div class="text-center text-white">
+                <h2 class="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">探索日本之美</h2>
+                <p class="text-xl md:text-2xl mb-8 animate-slide-up">大阪长野5天4晚亲子游完整攻略</p>
+                <div class="flex flex-wrap justify-center gap-4 text-lg">
+                    <div class="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full">
+                        <i class="fas fa-calendar-alt mr-2"></i>5天4晚
+                    </div>
+                    <div class="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full">
+                        <i class="fas fa-users mr-2"></i>亲子友好
+                    </div>
+                    <div class="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full">
+                        <i class="fas fa-map-marked-alt mr-2"></i>文化+自然
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 行程概览 -->
+    <section id="overview" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title">行程概览</h2>
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="overview-card">
+                    <div class="text-4xl mb-4">🏯</div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">文化探索</h3>
+                    <p class="text-gray-600">探访大阪城、松本城等历史名胜，感受日本传统文化魅力</p>
+                </div>
+                <div class="overview-card">
+                    <div class="text-4xl mb-4">🐒</div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">自然体验</h3>
+                    <p class="text-gray-600">观赏地狱谷雪猴、白丝瀑布，亲近大自然的奇妙世界</p>
+                </div>
+                <div class="overview-card">
+                    <div class="text-4xl mb-4">🎢</div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">亲子互动</h3>
+                    <p class="text-gray-600">环球影城、海游馆等亲子景点，创造美好家庭回忆</p>
+                </div>
+            </div>
+
+            <!-- 推荐季节 -->
+            <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8">
+                <h3 class="text-2xl font-bold mb-6 text-gray-800 flex items-center">
+                    <i class="fas fa-sun text-yellow-500 mr-3"></i>推荐季节
+                </h3>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="season-card">
+                        <div class="text-3xl mb-2">🌸</div>
+                        <h4 class="font-bold text-lg mb-2">春季</h4>
+                        <p class="text-sm text-gray-600">樱花盛开，气候宜人</p>
+                    </div>
+                    <div class="season-card">
+                        <div class="text-3xl mb-2">☀️</div>
+                        <h4 class="font-bold text-lg mb-2">夏季</h4>
+                        <p class="text-sm text-gray-600">长野避暑，清凉舒适</p>
+                    </div>
+                    <div class="season-card">
+                        <div class="text-3xl mb-2">🍁</div>
+                        <h4 class="font-bold text-lg mb-2">秋季</h4>
+                        <p class="text-sm text-gray-600">红叶美景，层林尽染</p>
+                    </div>
+                    <div class="season-card">
+                        <div class="text-3xl mb-2">❄️</div>
+                        <h4 class="font-bold text-lg mb-2">冬季</h4>
+                        <p class="text-sm text-gray-600">雪猴泡温泉，独特体验</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 详细行程 -->
+    <section id="itinerary" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title">详细行程安排</h2>
+            <div id="itineraryContainer" class="space-y-8"></div>
+        </div>
+    </section>
+
+    <!-- 交通指南 -->
+    <section id="transport" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title">交通指南</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- 城际交通 -->
+                <div class="transport-card">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-train text-3xl text-blue-600 mr-4"></i>
+                        <h3 class="text-2xl font-bold text-gray-800">城际交通</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="route-item">
+                            <div class="font-bold text-lg mb-2 text-gray-800">大阪 → 长野</div>
+                            <p class="text-gray-600 mb-2">乘坐JR新干线，约2.5小时</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-clock mr-2"></i>
+                                <span>建议购买关西广域JR Pass</span>
+                            </div>
+                        </div>
+                        <div class="route-item">
+                            <div class="font-bold text-lg mb-2 text-gray-800">长野 → 轻井泽</div>
+                            <p class="text-gray-600 mb-2">JR北陆新干线，约40分钟</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-yen-sign mr-2"></i>
+                                <span>单程约3,000日元</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 市内交通 -->
+                <div class="transport-card">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-bus text-3xl text-green-600 mr-4"></i>
+                        <h3 class="text-2xl font-bold text-gray-800">市内交通</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="route-item">
+                            <div class="font-bold text-lg mb-2 text-gray-800">大阪市内</div>
+                            <p class="text-gray-600 mb-2">地铁、巴士网络发达</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-credit-card mr-2"></i>
+                                <span>推荐使用ICOCA卡或大阪周游卡</span>
+                            </div>
+                        </div>
+                        <div class="route-item">
+                            <div class="font-bold text-lg mb-2 text-gray-800">长野市内</div>
+                            <p class="text-gray-600 mb-2">巴士为主要交通工具</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-credit-card mr-2"></i>
+                                <span>可使用西瓜卡（Suica）</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 交通卡推荐 -->
+                <div class="transport-card md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-ticket-alt text-3xl text-purple-600 mr-4"></i>
+                        <h3 class="text-2xl font-bold text-gray-800">交通卡推荐</h3>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="ticket-card">
+                            <h4 class="font-bold text-lg mb-2">关西广域JR Pass</h4>
+                            <p class="text-gray-600 text-sm mb-3">适合跨地区移动，5日券约10,000日元</p>
+                            <div class="text-green-600 font-bold">推荐指数: ⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <div class="ticket-card">
+                            <h4 class="font-bold text-lg mb-2">大阪周游卡</h4>
+                            <p class="text-gray-600 text-sm mb-3">包含多个景点门票，1日券2,800日元</p>
+                            <div class="text-green-600 font-bold">推荐指数: ⭐⭐⭐⭐</div>
+                        </div>
+                        <div class="ticket-card">
+                            <h4 class="font-bold text-lg mb-2">ICOCA/Suica</h4>
+                            <p class="text-gray-600 text-sm mb-3">充值型交通卡，全国通用</p>
+                            <div class="text-green-600 font-bold">推荐指数: ⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 实用贴士 -->
+    <section id="tips" class="py-16 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title">实用贴士</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="tips-card">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-ticket-alt text-3xl text-blue-600 mr-3"></i>
+                        <h3 class="text-xl font-bold">门票信息</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>雪猴公园：成人800日元，儿童400日元</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>松本城：成人700日元，儿童300日元</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>环球影城：建议提前购买快速通票</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tips-card">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-tshirt text-3xl text-purple-600 mr-3"></i>
+                        <h3 class="text-xl font-bold">装备建议</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>轻井泽夏季需薄外套，早晚温差大</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>冬季需防寒衣物和防滑鞋</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>雪猴公园徒步需舒适运动鞋</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tips-card">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-baby text-3xl text-pink-600 mr-3"></i>
+                        <h3 class="text-xl font-bold">亲子设施</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>大阪和长野酒店多提供婴儿床</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>主要景点都有哺乳室和换尿布台</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>环球影城提供婴儿车租赁服务</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tips-card">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-utensils text-3xl text-orange-600 mr-3"></i>
+                        <h3 class="text-xl font-bold">美食推荐</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>道顿堀：章鱼小丸子、大阪烧</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>黑门市场：新鲜海鲜和水果</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>轻井泽：手工果酱和冰淇淋</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tips-card">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-hotel text-3xl text-teal-600 mr-3"></i>
+                        <h3 class="text-xl font-bold">住宿建议</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>大阪：选择难波或梅田地区，交通便利</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>长野：推荐温泉酒店，体验日式榻榻米</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>提前预订可享受更优惠价格</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tips-card">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-exclamation-triangle text-3xl text-red-600 mr-3"></i>
+                        <h3 class="text-xl font-bold">注意事项</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>环球影城非周末人流较少</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>雪猴公园需徒步35分钟山路</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>日本垃圾分类严格，请遵守规定</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 备选方案 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title">备选方案</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="alternative-card">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-plus-circle text-3xl text-blue-600 mr-3"></i>
+                        <h3 class="text-xl font-bold">时间充裕可增加</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <div class="text-2xl mr-3">🏔️</div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">白川乡合掌村</h4>
+                                <p class="text-gray-600 text-sm">世界文化遗产，从长野乘车约2小时</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-2xl mr-3">🏛️</div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">高山阵屋</h4>
+                                <p class="text-gray-600 text-sm">江户时代建筑，体验古代日本风情</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alternative-card">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-map-marked-alt text-3xl text-green-600 mr-3"></i>
+                        <h3 class="text-xl font-bold">大阪周边推荐</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <div class="text-2xl mr-3">🦁</div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">神户动物王国</h4>
+                                <p class="text-gray-600 text-sm">可近距离接触小动物，孩子最爱</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-2xl mr-3">🦌</div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">奈良公园</h4>
+                                <p class="text-gray-600 text-sm">与小鹿亲密互动，喂食鹿饼干</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-plane-departure mr-2"></i>关于本攻略
+                    </h3>
+                    <p class="text-gray-300">精心策划的大阪长野亲子游攻略，为您的家庭旅行提供全方位指导。</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-link mr-2"></i>快速链接
+                    </h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#overview" class="hover:text-blue-400 transition">行程概览</a></li>
+                        <li><a href="#itinerary" class="hover:text-blue-400 transition">详细行程</a></li>
+                        <li><a href="#transport" class="hover:text-blue-400 transition">交通指南</a></li>
+                        <li><a href="#tips" class="hover:text-blue-400 transition">实用贴士</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-info-circle mr-2"></i>温馨提示
+                    </h3>
+                    <p class="text-gray-300">行程可根据孩子年龄和兴趣灵活调整，建议提前预订门票和酒店。</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 大阪长野亲子游攻略. 祝您旅途愉快！</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
