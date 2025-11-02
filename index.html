@@ -41,32 +41,15 @@
 
             <!-- 景点推荐 -->
             <section class="attractions-section">
-                <h2>🌟 推荐景点</h2>
-                <div id="attractionsList" class="attractions-grid">
-                    <div class="attraction-card">
-                        <h3>🎢 大阪环球影城</h3>
-                        <p><strong>适合年龄：</strong>全年龄段</p>
-                        <p><strong>亮点：</strong>哈利波特主题区、小黄人乐园、适合亲子的游乐设施</p>
-                        <p><strong>建议游玩时间：</strong>全天（建议购买快速通行证）</p>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h2 style="margin: 0;">🌟 推荐景点</h2>
+                    <div style="display: flex; gap: 10px;">
+                        <button class="btn btn-secondary btn-small" onclick="toggleAttractionsCollapse()" style="font-size: 0.9em;">▼ 展开/收起</button>
+                        <button class="btn btn-secondary btn-small" onclick="showEditPanel('attractions')" style="font-size: 0.9em;">✏️ 编辑</button>
                     </div>
-                    <div class="attraction-card">
-                        <h3>🐵 地狱谷野猿公苑</h3>
-                        <p><strong>适合年龄：</strong>3岁以上</p>
-                        <p><strong>亮点：</strong>观赏野生日本猕猴在温泉中泡澡的独特景象</p>
-                        <p><strong>建议游玩时间：</strong>2-3小时</p>
-                    </div>
-                    <div class="attraction-card">
-                        <h3>🏔️ 上高地</h3>
-                        <p><strong>适合年龄：</strong>5岁以上</p>
-                        <p><strong>亮点：</strong>日本阿尔卑斯山美景，亲子徒步路线，自然教育</p>
-                        <p><strong>建议游玩时间：</strong>半天至一天</p>
-                    </div>
-                    <div class="attraction-card">
-                        <h3>🐋 大阪海游馆</h3>
-                        <p><strong>适合年龄：</strong>全年龄段</p>
-                        <p><strong>亮点：</strong>亚洲最大的水族馆之一，近距离接触海洋生物</p>
-                        <p><strong>建议游玩时间：</strong>3-4小时</p>
-                    </div>
+                </div>
+                <div id="attractionsList" class="attractions-grid" style="display: block;">
+                    <p class="loading">加载中...</p>
                 </div>
             </section>
 
@@ -75,44 +58,31 @@
                 <h2>📝 实用信息</h2>
                 <div class="info-grid">
                     <div class="info-card">
-                        <h3>🚄 交通路线</h3>
-                        <div style="text-align: left; margin-top: 10px;">
-                            <p><strong>12.17 关西机场 → 大阪酒店：</strong></p>
-                            <ul style="font-size: 0.9em; margin: 5px 0;">
-                                <li>南海特急：关西机场 → 新今宫（34分钟，6:53～23:00）</li>
-                                <li>大阪环状线：新今宫 → 大阪城公园（18分钟，04:57～00:02）</li>
-                                <li>步行至酒店（4分钟，350米）</li>
-                            </ul>
-                            <p style="margin-top: 10px;"><strong>12.20 大阪 → 长野：</strong></p>
-                            <ul style="font-size: 0.9em; margin: 5px 0;">
-                                <li>方式1：新大阪 → 名古屋（新干线，50分钟）→ 长野（JR特急，2小时57分钟）</li>
-                                <li>方式2：新大阪 → 长野（雷鸟31特急 + 北陆新干线光辉514）</li>
-                                <li>长野站 → 酒店（步行4分钟，240米）</li>
-                            </ul>
-                            <p style="margin-top: 10px;"><strong>12.23 长野 → 关西机场：</strong></p>
-                            <ul style="font-size: 0.9em; margin: 5px 0;">
-                                <li>北陆新干线：长野 → 敦贺（1小时48分钟）</li>
-                                <li>雷鸟16特急：敦贺 → 大阪（1小时22分钟）</li>
-                                <li>关西机场交通车：大阪梅田 → 关西机场（50分钟）</li>
-                            </ul>
-                            <p style="margin-top: 10px; font-size: 0.85em; opacity: 0.9;">💡 购票：IC卡/现金，新干线需单独购票</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <h3>🚄 交通路线</h3>
+                            <button class="btn btn-secondary btn-small" onclick="showEditPanel('traffic')" style="font-size: 0.8em; padding: 4px 8px;">✏️</button>
+                        </div>
+                        <div id="trafficInfo" style="text-align: left; margin-top: 10px;">
+                            <p class="loading">加载中...</p>
                         </div>
                     </div>
                     <div class="info-card">
-                        <h3>🍱 美食推荐</h3>
-                        <ul>
-                            <li>大阪烧、章鱼烧（道顿堀）</li>
-                            <li>长野荞麦面</li>
-                            <li>和牛烤肉（适合孩子）</li>
-                        </ul>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <h3>🍱 美食推荐</h3>
+                            <button class="btn btn-secondary btn-small" onclick="showEditPanel('food')" style="font-size: 0.8em; padding: 4px 8px;">✏️</button>
+                        </div>
+                        <div id="foodInfo">
+                            <p class="loading">加载中...</p>
+                        </div>
                     </div>
                     <div class="info-card">
-                        <h3>🏨 住宿信息</h3>
-                        <ul>
-                            <li><strong>大阪：</strong>大阪新大谷酒店（12.17-12.20）</li>
-                            <li><strong>长野：</strong>Dormy inn长野善光之汤温泉酒店（12.20-12.23）</li>
-                            <li>长野酒店距离长野站步行4分钟（240米）</li>
-                        </ul>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <h3>🏨 住宿信息</h3>
+                            <button class="btn btn-secondary btn-small" onclick="showEditPanel('accommodation')" style="font-size: 0.8em; padding: 4px 8px;">✏️</button>
+                        </div>
+                        <div id="accommodationInfo">
+                            <p class="loading">加载中...</p>
+                        </div>
                     </div>
                     <div class="info-card">
                         <h3>⚠️ 注意事项</h3>
@@ -158,6 +128,124 @@
         </footer>
     </div>
 
+    <script src="data-manager.js"></script>
+    <script src="edit-panel.js"></script>
     <script src="static-site.js"></script>
+    
+    <style>
+        /* 编辑面板样式 */
+        .edit-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+            display: none;
+        }
+        
+        .edit-panel {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 700px;
+            max-height: 80vh;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            display: none;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .edit-header {
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+            color: white;
+        }
+        
+        .edit-header h2 {
+            margin: 0;
+            font-size: 1.3em;
+        }
+        
+        .btn-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2em;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+        }
+        
+        .edit-content {
+            padding: 20px;
+            overflow-y: auto;
+            flex: 1;
+        }
+        
+        .edit-footer {
+            padding: 15px 20px;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+        
+        .edit-section {
+            margin-bottom: 20px;
+        }
+        
+        .edit-group {
+            margin-bottom: 15px;
+        }
+        
+        .edit-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #555;
+        }
+        
+        /* 景点折叠动画 */
+        .attractions-grid.collapsed {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .attractions-grid.expanded {
+            max-height: 5000px;
+            transition: max-height 0.5s ease-in;
+        }
+    </style>
+    
+    <script>
+        // 景点展开/收起功能
+        let attractionsCollapsed = false;
+        function toggleAttractionsCollapse() {
+            const container = document.getElementById('attractionsList');
+            if (!container) return;
+            
+            attractionsCollapsed = !attractionsCollapsed;
+            if (attractionsCollapsed) {
+                container.style.display = 'none';
+            } else {
+                container.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
